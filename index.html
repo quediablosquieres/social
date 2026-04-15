@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Qué diablos quieres?</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #1d1d1b;
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 400px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .logo {
+            width: 100%;
+            max-width: 250px;
+            animation: logoEntrance 0.8s ease-out forwards;
+        }
+
+        @keyframes logoEntrance {
+            0% { opacity: 0; transform: scale(0.8) translateY(-20px); }
+            100% { opacity: 1; transform: scale(1) translateY(0); }
+        }
+
+        .description {
+            text-align: center;
+            font-size: 0.95rem;
+            color: rgba(255,255,255,0.9);
+            line-height: 1.6;
+            animation: fadeIn 0.8s ease-out 0.2s forwards;
+            opacity: 0;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .buttons {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            animation: fadeIn 0.8s ease-out 0.4s forwards;
+            opacity: 0;
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            min-height: 48px;
+            padding: 14px 24px;
+            background-color: #b01917;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 500;
+            border-radius: 14px;
+            transition: all 0.25s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px) scale(1.02);
+        }
+
+        .btn:active {
+            transform: scale(0.97);
+        }
+
+        /* ICONOS ESTABLES */
+        .icon {
+            width: 22px;
+            height: 22px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: block;
+        }
+
+        /* Glow uniforme */
+        .menu:hover,
+        .promociones:hover,
+        .instagram:hover,
+        .tiktok:hover,
+        .ubicacion:hover {
+            box-shadow: 0 10px 30px rgba(193, 53, 132, 0.5);
+        }
+
+        /* WhatsApp */
+        .whatsapp {
+            background-color: #25D366;
+        }
+
+        .whatsapp:hover {
+            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.5);
+        }
+    </style>
+</head>
+
+<body>
+    <main class="container">
+
+        <img src="logo/logo-que-diablos-quieres.png" class="logo">
+
+        <p class="description">
+            Conoce nuestras promos, novedades y sorpresas especiales.<br>
+            Discover our promos, news, and special surprises.
+        </p>
+
+        <nav class="buttons">
+
+            <a href="resources/menu.pdf" target="_blank" class="btn menu">
+                <span class="icon">
+                    <img src="logo/menu.svg" alt="">
+                </span>
+                Menú Digital
+            </a>
+
+            <a href="logo/promociones.jpg" target="_blank" class="btn promociones">
+                <span class="icon">
+                    <img src="logo/promocion.svg" alt="">
+                </span>
+                Promociones
+
+            <a href="https://www.instagram.com/quediablosquieres.food/" target="_blank" class="btn instagram">
+                <span class="icon">
+                    <img src="logo/instagram.svg" alt="">
+                </span>
+                Instagram
+            </a>
+
+            <a href="https://www.tiktok.com/@quediablosquieres" target="_blank" class="btn tiktok">
+                <span class="icon">
+                    <img src="logo/tiktok.svg" alt="">
+                </span>
+                TikTok
+            </a>
+
+            <a href="https://maps.app.goo.gl/kcZ4TGXjyQTEF9aRA" target="_blank" class="btn ubicacion">
+                <span class="icon">
+                    <img src="logo/ubicacion.svg" alt="">
+                </span>
+                Ubicación
+            </a>
+
+            <a href="https://wa.link/5vses5" target="_blank" class="btn whatsapp">
+                <span class="icon">
+                    <img src="logo/whatsapp.svg" alt="">
+                </span>
+                WhatsApp
+            </a>
+
+        </nav>
+
+    </main>
+</body>
+</html>
